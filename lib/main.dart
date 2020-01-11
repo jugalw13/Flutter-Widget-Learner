@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:widget_learner/core/home_view.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MainApplication());
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class MainApplication extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,21 +12,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: HomeView(),
-    );
-  }
-}
-
-class HomeView extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text('Home View'),
-      ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
