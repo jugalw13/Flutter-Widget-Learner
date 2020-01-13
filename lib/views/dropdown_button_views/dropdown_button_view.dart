@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:widget_learner/widgets/custom_scaffold.dart';
 
-class RowView extends StatelessWidget {
+class DropdownButtonView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-      title: 'Row',
+      title: 'DropdownButton',
       body: Center(
-        child: Text('Row View'),
+        child: Text('DropdownButton View'),
       ),
     );
   }

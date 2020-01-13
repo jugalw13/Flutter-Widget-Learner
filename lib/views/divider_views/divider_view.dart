@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:widget_learner/widgets/custom_scaffold.dart';
 
-class RowView extends StatelessWidget {
+class DividerView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-      title: 'Row',
+      title: 'Divider',
       body: Center(
-        child: Text('Row View'),
+        child: Text('Divider View'),
       ),
     );
   }

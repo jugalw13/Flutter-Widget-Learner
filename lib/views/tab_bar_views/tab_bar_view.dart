@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:widget_learner/widgets/custom_scaffold.dart';
 
-class RowView extends StatelessWidget {
+class TabBarView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-      title: 'Row',
+      title: 'TabBar',
       body: Center(
-        child: Text('Row View'),
+        child: Text('TabBar View'),
       ),
     );
   }
