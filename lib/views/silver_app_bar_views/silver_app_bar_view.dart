@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:widget_learner/widgets/custom_scaffold.dart';
 
-class SilverAppBarView extends StatelessWidget {
+class SliverAppBarView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-      title: 'SilverAppBar',
+      title: 'SliverAppBar',
       body: Center(
-        child: Text('SilverAppBar View'),
+        child: Text('SliverAppBar View'),
       ),
     );
   }

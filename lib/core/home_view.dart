@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:widget_learner/views/app_bar_views/app_bar_view.dart';
 import 'package:widget_learner/views/bottom_navigation_bar_views/bottom_navigation_bar_view.dart';
+import 'package:widget_learner/views/button_bar_views/button_bar_view.dart';
 import 'package:widget_learner/views/center_views/center_view.dart';
 import 'package:widget_learner/views/column_views/column_view.dart';
 import 'package:widget_learner/views/container_views/container_view.dart';
 import 'package:widget_learner/views/drawer_views/drawer_view.dart';
+import 'package:widget_learner/views/dropdown_button_views/dropdown_button_view.dart';
+import 'package:widget_learner/views/flat_button_views/flat_button_view.dart';
+import 'package:widget_learner/views/floating_action_button_views/floating_action_button_view.dart';
+import 'package:widget_learner/views/icon_button_views/icon_button_view.dart';
+import 'package:widget_learner/views/icon_views/icon_view.dart';
+import 'package:widget_learner/views/image_views/image_view.dart';
+import 'package:widget_learner/views/outline_button_views/outline_button_view.dart';
+import 'package:widget_learner/views/popup_menu_button_views/popup_menu_button_view.dart';
+import 'package:widget_learner/views/raised_button_views/raised_button_view.dart';
 import 'package:widget_learner/views/row_views/row_view.dart';
+import 'package:widget_learner/views/scaffold_views/scaffold_view.dart';
+import 'package:widget_learner/views/silver_app_bar_views/silver_app_bar_view.dart';
+import 'package:widget_learner/views/tab_bar_views/tab_bar_view.dart';
+import 'package:widget_learner/views/text_views/text_view.dart';
+import 'package:widget_learner/widgets/demo_widget.dart';
 
 class HomeView extends StatelessWidget {
   final TextStyle cardTextStyle = TextStyle(
@@ -50,133 +65,120 @@ class HomeView extends StatelessWidget {
   }
 
   List<Widget> listOfWidgets(BuildContext context) {
-    return [
-      GestureDetector(
-        onTap: () => Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => AppBarView(),
-          ),
-        ),
-        child: Container(
-          padding: listPadding,
-          child: Card(
-            child: Container(
-              padding: cardPadding,
-              child: Center(
-                child: Text('AppBar', style: cardTextStyle),
-              ),
-            ),
-          ),
-        ),
+    List<DemoWidget> widgets = [
+      DemoWidget(
+        title: 'Scaffold',
+        body: ScaffoldView(),
       ),
-      GestureDetector(
-        onTap: () => Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => CenterView(),
-          ),
-        ),
-        child: Container(
-          padding: listPadding,
-          child: Card(
-            child: Container(
-              padding: cardPadding,
-              child: Center(
-                child: Text('Center', style: cardTextStyle),
-              ),
-            ),
-          ),
-        ),
+      DemoWidget(
+        title: 'AppBar',
+        body: AppBarView(),
       ),
-      GestureDetector(
-        onTap: () => Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => ContainerView(),
-          ),
-        ),
-        child: Container(
-          padding: listPadding,
-          child: Card(
-            child: Container(
-              padding: cardPadding,
-              child: Center(
-                child: Text('Container', style: cardTextStyle),
-              ),
-            ),
-          ),
-        ),
+      DemoWidget(
+        title: 'Center',
+        body: CenterView(),
       ),
-      GestureDetector(
-        onTap: () => Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => RowView(),
-          ),
-        ),
-        child: Container(
-          padding: listPadding,
-          child: Card(
-            child: Container(
-              padding: cardPadding,
-              child: Center(
-                child: Text('Row', style: cardTextStyle),
-              ),
-            ),
-          ),
-        ),
+      DemoWidget(
+        title: 'Container',
+        body: ContainerView(),
       ),
-      GestureDetector(
-        onTap: () => Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => ColumnView(),
-          ),
-        ),
-        child: Container(
-          padding: listPadding,
-          child: Card(
-            child: Container(
-              padding: cardPadding,
-              child: Center(
-                child: Text('Column', style: cardTextStyle),
-              ),
-            ),
-          ),
-        ),
+      DemoWidget(
+        title: 'Row',
+        body: RowView(),
       ),
-      GestureDetector(
-        onTap: () => Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => BottomNavigationBarView(),
-          ),
-        ),
-        child: Container(
-          padding: listPadding,
-          child: Card(
-            child: Container(
-              padding: cardPadding,
-              child: Center(
-                child: Text('BottomNavigationBar', style: cardTextStyle),
-              ),
-            ),
-          ),
-        ),
+      DemoWidget(
+        title: 'Column',
+        body: ColumnView(),
       ),
-      GestureDetector(
-        onTap: () => Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => DrawerView(),
-          ),
-        ),
-        child: Container(
-          padding: listPadding,
-          child: Card(
-            child: Container(
-              padding: cardPadding,
-              child: Center(
-                child: Text('Drawer', style: cardTextStyle),
-              ),
-            ),
-          ),
-        ),
+      DemoWidget(
+        title: 'Icon',
+        body: IconView(),
+      ),
+      DemoWidget(
+        title: 'Image',
+        body: ImageView(),
+      ),
+      DemoWidget(
+        title: 'RaisedButton',
+        body: RaisedButtonView(),
+      ),
+      DemoWidget(
+        title: 'Text',
+        body: TextView(),
+      ),
+      DemoWidget(
+        title: 'BottomNavigationBar',
+        body: BottomNavigationBarView(),
+      ),
+      DemoWidget(
+        title: 'Drawer',
+        body: DrawerView(),
+      ),
+      DemoWidget(
+        title: 'SliverAppBar',
+        body: SliverAppBarView(),
+      ),
+      DemoWidget(
+        title: 'TabBar',
+        body: CustomTabBarView(),
+      ),
+      DemoWidget(
+        title: 'ButtonBar',
+        body: ButtonBarView(),
+      ),
+      DemoWidget(
+        title: 'DropdownButton',
+        body: DropdownButtonView(),
+      ),
+      DemoWidget(
+        title: 'FlatButton',
+        body: FlatButtonView(),
+      ),
+      DemoWidget(
+        title: 'FloatingActionButton',
+        body: FloatingActionButtonView(),
+      ),
+      DemoWidget(
+        title: 'IconButton',
+        body: IconButtonView(),
+      ),
+      DemoWidget(
+        title: 'OutlineButton',
+        body: OutlineButtonView(),
+      ),
+      DemoWidget(
+        title: 'PopupMenuButton',
+        body: PopupMenuButtonView(),
       ),
     ];
+    return widgets
+        .map(
+          (widget) => getCard(
+            title: widget.title,
+            onTap: () => Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (context) => widget.body,
+              ),
+            ),
+          ),
+        )
+        .toList();
+  }
+
+  Widget getCard({Function onTap, String title}) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: listPadding,
+        child: Card(
+          child: Container(
+            padding: cardPadding,
+            child: Center(
+              child: Text(title, style: cardTextStyle),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
