@@ -31,6 +31,10 @@ class CustomCard extends StatelessWidget {
       child: Container(
         padding: listPadding,
         child: Card(
+          elevation: 10,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
           child: Container(
             padding: cardPadding,
             child: Center(

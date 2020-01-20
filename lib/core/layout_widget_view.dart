@@ -54,7 +54,7 @@ class LayoutWidgetView extends StatelessWidget {
         .map(
           (widget) => CustomCard(
             title: widget.title,
-            onTap: () => Navigator.of(context).pushReplacement(
+            onTap: () => Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (context) => widget.body,
               ),

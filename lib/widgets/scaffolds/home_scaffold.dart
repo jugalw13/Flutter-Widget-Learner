@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:widget_learner/core/home_view.dart';
 
 class HomeScaffold extends StatelessWidget {
   final String _title;
@@ -17,11 +16,7 @@ class HomeScaffold extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: GestureDetector(
-          onTap: () => Navigator.of(context).pushReplacement(
-            MaterialPageRoute(
-              builder: (context) => HomeView(),
-            ),
-          ),
+          onTap: () => Navigator.of(context).pop(),
           child: Icon(
             Icons.home,
           ),

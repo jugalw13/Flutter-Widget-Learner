@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:widget_learner/core/dialog_widget_view.dart';
 
-class DialogScaffold extends StatelessWidget {
+class CustomScaffold extends StatelessWidget {
   final String _title;
 
   final Widget _body;
 
-  DialogScaffold({
+  CustomScaffold({
     @required String title,
     @required Widget body,
   })  : this._title = title,
@@ -16,16 +15,6 @@ class DialogScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: GestureDetector(
-          onTap: () => Navigator.of(context).pushReplacement(
-            MaterialPageRoute(
-              builder: (context) => DialogWidgetView(),
-            ),
-          ),
-          child: Icon(
-            Icons.arrow_back,
-          ),
-        ),
         title: Text(
           this._title,
         ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:widget_learner/widgets/scaffolds/button_scaffold.dart';
+import 'package:widget_learner/widgets/scaffolds/custom_scaffold.dart';
 
 class IconButtonView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ButtonScaffold(
+    return CustomScaffold(
       title: 'IconButton',
       body: Center(
         child: Text('IconButton View'),

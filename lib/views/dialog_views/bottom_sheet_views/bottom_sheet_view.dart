@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:widget_learner/widgets/scaffolds/dialog_scaffold.dart';
+import 'package:widget_learner/widgets/scaffolds/custom_scaffold.dart';
 
 class BottomSheetView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return DialogScaffold(
+    return CustomScaffold(
       title: 'BottomSheet',
       body: Center(
         child: Text('BottomSheet View'),

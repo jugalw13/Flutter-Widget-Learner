@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:widget_learner/widgets/scaffolds/basic_scaffold.dart';
+import 'package:widget_learner/widgets/scaffolds/custom_scaffold.dart';
 
 class ColumnView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return BasicScaffold(
+    return CustomScaffold(
       title: 'Column',
       body: Center(
         child: Text('Column View'),
