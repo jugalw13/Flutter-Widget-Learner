@@ -1,29 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:widget_learner/core/app_structure_widget_view.dart';
-import 'package:widget_learner/core/basic_widget_view.dart';
-import 'package:widget_learner/core/button_widget_view.dart';
-import 'package:widget_learner/core/dialog_widget_view.dart';
-import 'package:widget_learner/core/information_widget_view.dart';
-import 'package:widget_learner/core/input_widget_view.dart';
-import 'package:widget_learner/core/layout_widget_view.dart';
+import 'package:widget_learner/views/app_structure_views/bottom_navigation_bar_views/bottom_navigation_bar_view.dart';
+import 'package:widget_learner/views/app_structure_views/drawer_views/drawer_view.dart';
+import 'package:widget_learner/views/app_structure_views/sliver_app_bar_views/sliver_app_bar_view.dart';
+import 'package:widget_learner/views/app_structure_views/tab_bar_views/tab_bar_view.dart';
 import 'package:widget_learner/widgets/custom_card.dart';
 import 'package:widget_learner/widgets/demo_widget.dart';
+import 'package:widget_learner/widgets/scaffolds/home_scaffold.dart';
 
-class HomeView extends StatelessWidget {
+class AppStructureWidgetView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-        centerTitle: true,
-      ),
+    return HomeScaffold(
+      title: 'App Structure & Navigation Widgets',
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
             padding: EdgeInsets.fromLTRB(16, 8, 20, 4),
             child: Text(
-              'List of Widgets',
+              'List of App Strutcure & Navigation Widgets',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w600,
@@ -44,32 +39,20 @@ class HomeView extends StatelessWidget {
   List<Widget> listOfWidgets(BuildContext context) {
     List<DemoWidget> widgets = [
       DemoWidget(
-        title: 'Basic Widgets',
-        body: BasicWidgetView(),
+        title: 'BottomNavigationBar',
+        body: BottomNavigationBarView(),
       ),
       DemoWidget(
-        title: 'App Structure & Navigation',
-        body: AppStructureWidgetView(),
+        title: 'Drawer',
+        body: DrawerView(),
       ),
       DemoWidget(
-        title: 'Buttons',
-        body: ButtonWidgetView(),
+        title: 'SliverAppBar',
+        body: SliverAppBarView(),
       ),
       DemoWidget(
-        title: 'Input and Selections',
-        body: InputWidgetView(),
-      ),
-      DemoWidget(
-        title: 'Dialogs, alerts, and panels',
-        body: DialogWidgetView(),
-      ),
-      DemoWidget(
-        title: 'Information displays',
-        body: InformationWidgetView(),
-      ),
-      DemoWidget(
-        title: 'Layout',
-        body: LayoutWidgetView(),
+        title: 'TabBar',
+        body: CustomTabBarView(),
       ),
     ];
     return widgets

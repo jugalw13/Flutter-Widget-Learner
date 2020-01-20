@@ -1,29 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:widget_learner/core/app_structure_widget_view.dart';
-import 'package:widget_learner/core/basic_widget_view.dart';
-import 'package:widget_learner/core/button_widget_view.dart';
-import 'package:widget_learner/core/dialog_widget_view.dart';
-import 'package:widget_learner/core/information_widget_view.dart';
-import 'package:widget_learner/core/input_widget_view.dart';
-import 'package:widget_learner/core/layout_widget_view.dart';
+import 'package:widget_learner/views/button_views/button_bar_views/button_bar_view.dart';
+import 'package:widget_learner/views/button_views/dropdown_button_views/dropdown_button_view.dart';
+import 'package:widget_learner/views/button_views/flat_button_views/flat_button_view.dart';
+import 'package:widget_learner/views/button_views/floating_action_button_views/floating_action_button_view.dart';
+import 'package:widget_learner/views/button_views/icon_button_views/icon_button_view.dart';
+import 'package:widget_learner/views/button_views/outline_button_views/outline_button_view.dart';
+import 'package:widget_learner/views/button_views/popup_menu_button_views/popup_menu_button_view.dart';
 import 'package:widget_learner/widgets/custom_card.dart';
 import 'package:widget_learner/widgets/demo_widget.dart';
+import 'package:widget_learner/widgets/scaffolds/home_scaffold.dart';
 
-class HomeView extends StatelessWidget {
+class ButtonWidgetView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-        centerTitle: true,
-      ),
+    return HomeScaffold(
+      title: 'Button Widget',
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
             padding: EdgeInsets.fromLTRB(16, 8, 20, 4),
             child: Text(
-              'List of Widgets',
+              'List of Button Widgets',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w600,
@@ -44,32 +42,32 @@ class HomeView extends StatelessWidget {
   List<Widget> listOfWidgets(BuildContext context) {
     List<DemoWidget> widgets = [
       DemoWidget(
-        title: 'Basic Widgets',
-        body: BasicWidgetView(),
+        title: 'ButtonBar',
+        body: ButtonBarView(),
       ),
       DemoWidget(
-        title: 'App Structure & Navigation',
-        body: AppStructureWidgetView(),
+        title: 'DropdownButton',
+        body: DropdownButtonView(),
       ),
       DemoWidget(
-        title: 'Buttons',
-        body: ButtonWidgetView(),
+        title: 'FlatButton',
+        body: FlatButtonView(),
       ),
       DemoWidget(
-        title: 'Input and Selections',
-        body: InputWidgetView(),
+        title: 'FloatingActionButton',
+        body: FloatingActionButtonView(),
       ),
       DemoWidget(
-        title: 'Dialogs, alerts, and panels',
-        body: DialogWidgetView(),
+        title: 'IconButton',
+        body: IconButtonView(),
       ),
       DemoWidget(
-        title: 'Information displays',
-        body: InformationWidgetView(),
+        title: 'OutlineButton',
+        body: OutlineButtonView(),
       ),
       DemoWidget(
-        title: 'Layout',
-        body: LayoutWidgetView(),
+        title: 'PopupMenuButton',
+        body: PopupMenuButtonView(),
       ),
     ];
     return widgets

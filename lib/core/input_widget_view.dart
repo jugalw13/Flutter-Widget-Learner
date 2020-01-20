@@ -1,29 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:widget_learner/core/app_structure_widget_view.dart';
-import 'package:widget_learner/core/basic_widget_view.dart';
-import 'package:widget_learner/core/button_widget_view.dart';
-import 'package:widget_learner/core/dialog_widget_view.dart';
-import 'package:widget_learner/core/information_widget_view.dart';
-import 'package:widget_learner/core/input_widget_view.dart';
-import 'package:widget_learner/core/layout_widget_view.dart';
+import 'package:widget_learner/views/input_views/checkbox_views/checkbox_view.dart';
+import 'package:widget_learner/views/input_views/date_time_picker_views/date_time_picker_view.dart';
+import 'package:widget_learner/views/input_views/radio_views/radio_view.dart';
+import 'package:widget_learner/views/input_views/slider_views/slider_view.dart';
+import 'package:widget_learner/views/input_views/switch_views/switch_view.dart';
+import 'package:widget_learner/views/input_views/text_field_views/text_field_view.dart';
 import 'package:widget_learner/widgets/custom_card.dart';
 import 'package:widget_learner/widgets/demo_widget.dart';
+import 'package:widget_learner/widgets/scaffolds/home_scaffold.dart';
 
-class HomeView extends StatelessWidget {
+class InputWidgetView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-        centerTitle: true,
-      ),
+    return HomeScaffold(
+      title: 'Input Widget',
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
             padding: EdgeInsets.fromLTRB(16, 8, 20, 4),
             child: Text(
-              'List of Widgets',
+              'List of Input Widgets',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w600,
@@ -44,32 +41,28 @@ class HomeView extends StatelessWidget {
   List<Widget> listOfWidgets(BuildContext context) {
     List<DemoWidget> widgets = [
       DemoWidget(
-        title: 'Basic Widgets',
-        body: BasicWidgetView(),
+        title: 'Checkbox',
+        body: CheckboxView(),
       ),
       DemoWidget(
-        title: 'App Structure & Navigation',
-        body: AppStructureWidgetView(),
+        title: 'Date & Time Pickers',
+        body: DateTimePickerView(),
       ),
       DemoWidget(
-        title: 'Buttons',
-        body: ButtonWidgetView(),
+        title: 'Radio',
+        body: RadioView(),
       ),
       DemoWidget(
-        title: 'Input and Selections',
-        body: InputWidgetView(),
+        title: 'Slider',
+        body: SliderView(),
       ),
       DemoWidget(
-        title: 'Dialogs, alerts, and panels',
-        body: DialogWidgetView(),
+        title: 'Switch',
+        body: SwitchView(),
       ),
       DemoWidget(
-        title: 'Information displays',
-        body: InformationWidgetView(),
-      ),
-      DemoWidget(
-        title: 'Layout',
-        body: LayoutWidgetView(),
+        title: 'TextField',
+        body: TextFieldView(),
       ),
     ];
     return widgets
