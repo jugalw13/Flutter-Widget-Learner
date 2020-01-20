@@ -6,8 +6,46 @@ class CenterView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'Center',
-      body: Center(
-        child: Text('Center View'),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Center(
+            child: Container(
+              padding: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.blue,
+                  width: 2,
+                  style: BorderStyle.solid,
+                ),
+              ),
+              height: 120,
+              width: 120,
+              child: Center(
+                child: Text(
+                  'Center Widget centers items',
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+          ),
+          Center(
+            child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.blue,
+                  width: 2,
+                  style: BorderStyle.solid,
+                ),
+              ),
+              width: 150,
+              height: 150,
+              child: Center(
+                child: CircularProgressIndicator(),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
