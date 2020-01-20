@@ -4,12 +4,12 @@ import 'package:widget_learner/views/layout_views/list_tile_views/list_tile_view
 import 'package:widget_learner/views/layout_views/stepper_views/stepper_view.dart';
 import 'package:widget_learner/widgets/custom_card.dart';
 import 'package:widget_learner/widgets/demo_widget.dart';
-import 'package:widget_learner/widgets/scaffolds/layout_scaffold.dart';
+import 'package:widget_learner/widgets/scaffolds/home_scaffold.dart';
 
 class LayoutWidgetView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return LayoutScaffold(
+    return HomeScaffold(
       title: 'Layout Widget',
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
