@@ -14,7 +14,7 @@ class ButtonWidgetView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HomeScaffold(
-      title: 'Button Widget',
+      title: 'Button Widgets',
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[

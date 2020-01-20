@@ -4,20 +4,20 @@ import 'package:widget_learner/views/layout_views/list_tile_views/list_tile_view
 import 'package:widget_learner/views/layout_views/stepper_views/stepper_view.dart';
 import 'package:widget_learner/widgets/custom_card.dart';
 import 'package:widget_learner/widgets/demo_widget.dart';
-import 'package:widget_learner/widgets/scaffolds/home_scaffold.dart';
+import 'package:widget_learner/widgets/scaffolds/layout_scaffold.dart';
 
 class LayoutWidgetView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return HomeScaffold(
-      title: 'Input Widget',
+    return LayoutScaffold(
+      title: 'Layout Widget',
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
             padding: EdgeInsets.fromLTRB(16, 8, 20, 4),
             child: Text(
-              'List of Input Widgets',
+              'List of Layout Widgets',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w600,

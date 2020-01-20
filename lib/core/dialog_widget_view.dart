@@ -12,7 +12,7 @@ class DialogWidgetView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return HomeScaffold(
-      title: 'Dialog, alerts and panels Widget',
+      title: 'Dialog, alerts and panels Widgets',
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[

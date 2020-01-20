@@ -23,7 +23,7 @@ class InformationScaffold extends StatelessWidget {
             ),
           ),
           child: Icon(
-            Icons.home,
+            Icons.arrow_back,
           ),
         ),
         title: Text(

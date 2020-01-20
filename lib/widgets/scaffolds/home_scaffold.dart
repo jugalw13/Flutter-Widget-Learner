@@ -28,6 +28,7 @@ class HomeScaffold extends StatelessWidget {
         ),
         title: Text(
           this._title,
+          maxLines: 2,
         ),
         centerTitle: true,
       ),
