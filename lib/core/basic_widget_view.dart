@@ -61,12 +61,12 @@ class BasicWidgetView extends StatelessWidget {
         body: ContainerView(),
       ),
       DemoWidget(
-        title: 'Row',
-        body: RowView(),
-      ),
-      DemoWidget(
         title: 'Column',
         body: ColumnView(),
+      ),
+      DemoWidget(
+        title: 'Row',
+        body: RowView(),
       ),
       DemoWidget(
         title: 'Icon',

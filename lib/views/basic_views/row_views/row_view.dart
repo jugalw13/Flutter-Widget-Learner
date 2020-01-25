@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:widget_learner/widgets/scaffolds/custom_scaffold.dart';
+import 'package:widget_learner/widgets/custom_view.dart';
 
 class RowView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CustomScaffold(
+    return CustomView(
       title: 'Row',
-      body: Center(
-        child: Text('Row View'),
-      ),
+      sampleTitle: 'Sample Rows',
+      listOfWidgetChildren: <Widget>[],
     );
   }
 }
