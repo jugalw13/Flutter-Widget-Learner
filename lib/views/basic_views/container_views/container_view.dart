@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:widget_learner/views/basic_views/container_views/container_align_view.dart';
 import 'package:widget_learner/views/basic_views/container_views/container_border_view.dart';
+import 'package:widget_learner/views/basic_views/container_views/container_rounded_borders_view.dart';
 import 'package:widget_learner/views/basic_views/container_views/container_shadow_view.dart';
 import 'package:widget_learner/views/basic_views/container_views/simple_container_view.dart';
 import 'package:widget_learner/widgets/custom_card.dart';
@@ -42,6 +43,14 @@ class ContainerView extends StatelessWidget {
           onTap: () => Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => ContainerAlignView(),
+            ),
+          ),
+        ),
+        CustomCard(
+          title: 'Container with Different Border Property',
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => ContainerRoundedBorderView(),
             ),
           ),
         ),
