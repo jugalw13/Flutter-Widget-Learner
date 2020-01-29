@@ -7,7 +7,49 @@ class RaisedButtonView extends StatelessWidget {
     return CustomScaffold(
       title: 'RaisedButton',
       body: Center(
-        child: Text('RaisedButton View'),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            Center(
+              child: RaisedButton(
+                onPressed: () {},
+                child: Text(
+                  'Sample Raised Button',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                color: Colors.purple,
+                splashColor: Colors.white30,
+              ),
+            ),
+            Center(
+              child: RaisedButton(
+                onPressed: () {},
+                child: Icon(
+                  Icons.radio_button_checked,
+                  size: 20,
+                  color: Colors.red,
+                ),
+                color: Colors.black,
+                splashColor: Colors.white30,
+              ),
+            ),
+            Center(
+              child: RaisedButton(
+                onPressed: () {},
+                child: Text(
+                  'Elevated Raised Button',
+                  style: TextStyle(color: Colors.white),
+                ),
+                color: Colors.blue,
+                splashColor: Colors.white30,
+                elevation: 10,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

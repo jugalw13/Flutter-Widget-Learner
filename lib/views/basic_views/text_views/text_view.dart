@@ -7,7 +7,19 @@ class TextView extends StatelessWidget {
     return CustomScaffold(
       title: 'Text',
       body: Center(
-        child: Text('Text View'),
+        child: Text(
+          'Hello World',
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+            decoration: TextDecoration.underline,
+            decorationStyle: TextDecorationStyle.dotted,
+            backgroundColor: Colors.black,
+            letterSpacing: 2.0,
+            wordSpacing: 3.0,
+          ),
+        ),
       ),
     );
   }
