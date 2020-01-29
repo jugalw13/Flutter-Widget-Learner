@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widget_learner/views/basic_views/row_views/different_row_view.dart';
+import 'package:widget_learner/views/basic_views/row_views/row_with_column_view.dart';
 import 'package:widget_learner/views/basic_views/row_views/simple_row_view.dart';
 import 'package:widget_learner/views/basic_views/row_views/space_around_row_view.dart';
 import 'package:widget_learner/views/basic_views/row_views/space_between_row_view.dart';
@@ -51,6 +52,14 @@ class RowView extends StatelessWidget {
           onTap: () => Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => SpaceAroundRowView(),
+            ),
+          ),
+        ),
+        CustomCard(
+          title: 'Row with Nested Column',
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => RowWithColumnView(),
             ),
           ),
         ),
