@@ -7,7 +7,27 @@ class ButtonBarView extends StatelessWidget {
     return CustomScaffold(
       title: 'ButtonBar',
       body: Center(
-        child: Text('ButtonBar View'),
+        child: ButtonBar(
+          alignment: MainAxisAlignment.spaceAround,
+          mainAxisSize: MainAxisSize.max,
+          buttonPadding: EdgeInsets.all(12),
+          children: [
+            RaisedButton(
+              child: Text(
+                "Button 1",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              color: Colors.blue,
+              onPressed: () {},
+            ),
+            FlatButton(
+              child: Text("Button 2"),
+              onPressed: () {},
+            ),
+          ],
+        ),
       ),
     );
   }
