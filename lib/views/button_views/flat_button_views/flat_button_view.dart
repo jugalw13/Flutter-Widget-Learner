@@ -6,8 +6,16 @@ class FlatButtonView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'FlatButton',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/button_views/flat_button_views/flat_button_view.dart',
       body: Center(
-        child: Text('FlatButton View'),
+        child: FlatButton(
+          onPressed: () {},
+          color: Colors.blue,
+          textColor: Colors.white,
+          splashColor: Colors.white30,
+          child: Text('FlatButton View'),
+        ),
       ),
     );
   }

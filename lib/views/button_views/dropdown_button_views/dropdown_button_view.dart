@@ -13,6 +13,8 @@ class _DropdownButtonViewState extends State<DropdownButtonView> {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'DropdownButton',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/button_views/dropdown_button_views/dropdown_button_view.dart',
       body: Center(
         child: DropdownButton<String>(
           hint: Text('Select Value'),

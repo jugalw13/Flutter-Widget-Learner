@@ -6,8 +6,15 @@ class IconButtonView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'IconButton',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/button_views/icon_button_views/icon_button_view.dart',
       body: Center(
-        child: Text('IconButton View'),
+        child: IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.delete,
+          ),
+        ),
       ),
     );
   }

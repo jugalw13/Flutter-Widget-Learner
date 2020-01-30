@@ -6,8 +6,15 @@ class OutlineButtonView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'OutlineButton',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/button_views/outline_button_views/outline_button_view.dart',
       body: Center(
-        child: Text('OutlineButton View'),
+        child: OutlineButton(
+          onPressed: () {},
+          child: Text(
+            'Outline Button',
+          ),
+        ),
       ),
     );
   }

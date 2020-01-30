@@ -6,6 +6,8 @@ class ButtonBarView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'ButtonBar',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/button_views/button_bar_views/button_bar_view.dart',
       body: Center(
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceAround,

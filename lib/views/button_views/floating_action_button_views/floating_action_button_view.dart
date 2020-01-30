@@ -6,8 +6,15 @@ class FloatingActionButtonView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'FloatingActionButton',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/button_views/floating_action_button_views/floating_action_button_view.dart',
       body: Center(
-        child: Text('FloatingActionButton View'),
+        child: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(
+            Icons.add,
+          ),
+        ),
       ),
     );
   }
