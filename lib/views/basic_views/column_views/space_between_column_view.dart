@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:widget_learner/widgets/scaffolds/custom_scaffold.dart';
 
 class SpaceBetweenColumnView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
+    return CustomScaffold(
+      title: 'Column',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/basic_views/column_views/space_between_column_view.dart',
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

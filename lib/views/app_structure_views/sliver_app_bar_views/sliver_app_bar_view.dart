@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SliverAppBarView extends StatelessWidget {
   @override
@@ -11,6 +12,22 @@ class SliverAppBarView extends StatelessWidget {
               expandedHeight: 200.0,
               floating: false,
               pinned: true,
+              actions: <Widget>[
+                GestureDetector(
+                  onTap: () {
+                    openGithub(
+                      'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/app_structure_views/sliver_app_bar_views/sliver_app_bar_view.dart',
+                    );
+                  },
+                  child: Container(
+                    child: Image.asset(
+                      'assets/github.png',
+                      width: 36,
+                      height: 36,
+                    ),
+                  ),
+                ),
+              ],
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
                 title: Text(
@@ -34,5 +51,13 @@ class SliverAppBarView extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void openGithub(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

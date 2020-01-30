@@ -6,6 +6,8 @@ class RaisedButtonView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'RaisedButton',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/basic_views/raised_button_views/raised_button_view.dart',
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

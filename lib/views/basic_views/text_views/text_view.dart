@@ -6,6 +6,8 @@ class TextView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'Text',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/basic_views/text_views/text_view.dart',
       body: Center(
         child: Text(
           'Hello World',

@@ -6,6 +6,8 @@ class CenterView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'Center',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/basic_views/center_views/center_view.dart',
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[

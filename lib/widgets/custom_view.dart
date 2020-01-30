@@ -19,6 +19,8 @@ class CustomView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: this._title,
+      isGit: false,
+      url: '',
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[

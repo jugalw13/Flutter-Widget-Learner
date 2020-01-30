@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DrawerView extends StatelessWidget {
   @override
@@ -7,6 +8,22 @@ class DrawerView extends StatelessWidget {
       appBar: AppBar(
         title: Text('Drawer'),
         centerTitle: true,
+        actions: <Widget>[
+          GestureDetector(
+            onTap: () {
+              openGithub(
+                'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/app_structure_views/drawer_views/drawer_view.dart',
+              );
+            },
+            child: Container(
+              child: Image.asset(
+                'assets/github.png',
+                width: 36,
+                height: 36,
+              ),
+            ),
+          )
+        ],
       ),
       body: Center(
         child: RaisedButton(
@@ -43,5 +60,13 @@ class DrawerView extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void openGithub(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 }

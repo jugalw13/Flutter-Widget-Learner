@@ -7,6 +7,8 @@ class ImageView extends StatelessWidget {
     int width = MediaQuery.of(context).size.width.toInt();
     return CustomScaffold(
       title: 'Image',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/basic_views/image_views/image_view.dart',
       body: ListView(
         children: <Widget>[
           Image.asset('assets/lake.jpg'),
