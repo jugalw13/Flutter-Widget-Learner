@@ -7,7 +7,16 @@ class SnackBarView extends StatelessWidget {
     return CustomScaffold(
       title: 'SnackBar',
       body: Center(
-        child: Text('SnackBar View'),
+        child: RaisedButton(
+          onPressed: () {
+            Scaffold.of(context).showSnackBar(
+              SnackBar(
+                content: Text('Hello from SnackBar'),
+              ),
+            );
+          },
+          child: Text('SnackBar View'),
+        ),
       ),
     );
   }

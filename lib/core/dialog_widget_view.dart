@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widget_learner/views/dialog_views/alert_dialog_views/alert_dialog_view.dart';
 import 'package:widget_learner/views/dialog_views/bottom_sheet_views/bottom_sheet_view.dart';
-import 'package:widget_learner/views/dialog_views/expansion_panel_views/expansion_panel_view.dart';
-import 'package:widget_learner/views/dialog_views/simple_dialog_views/simple_dialog_view.dart';
 import 'package:widget_learner/views/dialog_views/snack_bar_views/snack_bar_view.dart';
 import 'package:widget_learner/widgets/custom_card.dart';
 import 'package:widget_learner/widgets/demo_widget.dart';
@@ -46,14 +44,6 @@ class DialogWidgetView extends StatelessWidget {
       DemoWidget(
         title: 'BottomSheet',
         body: BottomSheetView(),
-      ),
-      DemoWidget(
-        title: 'ExpansionPanel',
-        body: ExpansionPanelView(),
-      ),
-      DemoWidget(
-        title: 'SimpleDialog',
-        body: SimpleDialogView(),
       ),
       DemoWidget(
         title: 'SnackBar',

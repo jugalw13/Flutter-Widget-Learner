@@ -5,18 +5,17 @@ class CustomScaffold extends StatelessWidget {
   final String _title;
   final String _url;
   final Widget _body;
-  bool _isGit;
+  final bool _hasGit;
 
   CustomScaffold({
     @required String title,
     @required Widget body,
     String url,
-    bool isGit = true,
+    bool hasGit: false,
   })  : this._title = title,
         this._body = body,
-        this._url = url {
-    this._isGit = isGit;
-  }
+        this._url = url,
+        this._hasGit = hasGit;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,7 @@ class CustomScaffold extends StatelessWidget {
         ),
         centerTitle: true,
         actions: <Widget>[
-          this._isGit
+          this._hasGit
               ? GestureDetector(
                   onTap: () {
                     openGithub(this._url);
