@@ -10,19 +10,20 @@ class CustomTabBarView extends StatelessWidget {
         appBar: AppBar(
           actions: <Widget>[
             GestureDetector(
-                  onTap: () {
-                    openGithub(
-                      'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/app_structure_views/tab_bar_views/tab_bar_view.dart',
-                    );
-                  },
-                  child: Container(
-                    child: Image.asset(
-                      'assets/github.png',
-                      width: 36,
-                      height: 36,
-                    ),
-                  ),
+              onTap: () {
+                openGithub(
+                  'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/app_structure_views/tab_bar_views/tab_bar_view.dart',
+                );
+              },
+              child: Container(
+                child: Image.asset(
+                  'assets/github.png',
+                  width: 36,
+                  height: 36,
                 ),
+              ),
+            ),
+            SizedBox(width: 16),
           ],
           bottom: TabBar(
             tabs: [
