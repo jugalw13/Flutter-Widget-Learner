@@ -46,7 +46,7 @@ class _BottomNavigationBarViewState extends State<BottomNavigationBarView> {
             ),
           ),
           SizedBox(
-            width: 16,
+            width: 12,
           ),
         ],
       ),

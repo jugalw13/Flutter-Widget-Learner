@@ -6,8 +6,18 @@ class ChipView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'Chip',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/information_views/chip_views/chip_view.dart',
       body: Center(
-        child: Text('Chip View'),
+        child: Chip(
+          avatar: Icon(
+            Icons.person,
+          ),
+          label: Text(
+            'Chip View',
+          ),
+          elevation: 5,
+        ),
       ),
     );
   }

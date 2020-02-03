@@ -23,7 +23,7 @@ class CustomTabBarView extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: 16),
+            SizedBox(width: 12),
           ],
           bottom: TabBar(
             tabs: [

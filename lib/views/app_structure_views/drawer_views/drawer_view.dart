@@ -23,7 +23,7 @@ class DrawerView extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 16),
+          SizedBox(width: 12),
         ],
       ),
       body: Center(

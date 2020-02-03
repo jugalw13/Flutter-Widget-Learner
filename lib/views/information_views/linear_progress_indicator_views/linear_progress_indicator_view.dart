@@ -6,8 +6,13 @@ class LinearProgressIndicatorView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'LinearProgressIndicator',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/tree/master/lib/views/information_views/linear_progress_indicator_views',
       body: Center(
-        child: Text('LinearProgressIndicator View'),
+        child: Container(
+          width: 200,
+          child: LinearProgressIndicator(),
+        ),
       ),
     );
   }

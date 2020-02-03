@@ -6,8 +6,15 @@ class DividerView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'Divider',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/layout_views/divider_views/divider_view.dart',
       body: Center(
-        child: Text('Divider View'),
+        child: Divider(
+          thickness: 12,
+          color: Colors.black,
+          indent: 10,
+          endIndent: 10,
+        ),
       ),
     );
   }

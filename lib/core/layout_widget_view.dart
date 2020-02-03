@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widget_learner/views/layout_views/divider_views/divider_view.dart';
 import 'package:widget_learner/views/layout_views/list_tile_views/list_tile_view.dart';
-import 'package:widget_learner/views/layout_views/stepper_views/stepper_view.dart';
 import 'package:widget_learner/widgets/custom_card.dart';
 import 'package:widget_learner/widgets/demo_widget.dart';
 import 'package:widget_learner/widgets/scaffolds/home_scaffold.dart';
@@ -44,10 +43,6 @@ class LayoutWidgetView extends StatelessWidget {
       DemoWidget(
         title: 'ListTile',
         body: ListTileView(),
-      ),
-      DemoWidget(
-        title: 'Stepper',
-        body: StepperView(),
       ),
     ];
     return widgets

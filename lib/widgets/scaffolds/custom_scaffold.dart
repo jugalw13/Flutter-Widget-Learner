@@ -11,7 +11,7 @@ class CustomScaffold extends StatelessWidget {
     @required String title,
     @required Widget body,
     String url,
-    bool hasGit: false,
+    bool hasGit: true,
   })  : this._title = title,
         this._body = body,
         this._url = url,
@@ -41,7 +41,7 @@ class CustomScaffold extends StatelessWidget {
                 )
               : Offstage(),
           SizedBox(
-            width: 16,
+            width: 12,
           ),
         ],
       ),

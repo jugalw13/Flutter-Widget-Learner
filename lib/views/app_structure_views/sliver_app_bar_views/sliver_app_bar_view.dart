@@ -27,7 +27,7 @@ class SliverAppBarView extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 16),
+                SizedBox(width: 12),
               ],
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,

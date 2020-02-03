@@ -6,8 +6,12 @@ class CircularProgressIndicatorView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'CircularProgressIndicator',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/information_views/circular_progress_indicator_views/circular_progress_indicator_view.dart',
       body: Center(
-        child: Text('CircularProgressIndicator View'),
+        child: CircularProgressIndicator(
+          strokeWidth: 5,
+        ),
       ),
     );
   }

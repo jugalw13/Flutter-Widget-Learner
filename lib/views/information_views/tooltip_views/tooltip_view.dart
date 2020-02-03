@@ -6,8 +6,13 @@ class TooltipView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffold(
       title: 'Tooltip',
+      url:
+          'https://github.com/jugalw13/Flutter-Widget-Learner/blob/master/lib/views/information_views/tooltip_views/tooltip_view.dart',
       body: Center(
-        child: Text('Tooltip View'),
+        child: Tooltip(
+          child: Text('Add'),
+          message: 'Add',
+        ),
       ),
     );
   }
